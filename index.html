@@ -17,8 +17,13 @@
       --max: 1100px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -28,8 +33,14 @@
       line-height: 1.6;
     }
 
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
 
     .container {
       width: min(92%, var(--max));
@@ -41,24 +52,25 @@
       top: 0;
       z-index: 10;
       backdrop-filter: blur(10px);
-      background: rgba(247, 249, 252, 0.92);
-      border-bottom: 1px solid rgba(229, 231, 235, 0.8);
-      text-align: center;
+      background: rgba(247, 249, 252, 0.94);
+      border-bottom: 1px solid rgba(229, 231, 235, 0.85);
     }
 
     .nav {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 22px 0 14px;
+      padding: 24px 0 14px;
       gap: 8px;
     }
 
     .brand {
+      width: 100%;
+      text-align: center;
       font-weight: 800;
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       letter-spacing: 1px;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .nav-links {
@@ -207,13 +219,14 @@
     }
 
     .company-logo {
-      width: 56px;
-      height: 56px;
+      width: 64px;
+      height: 64px;
       object-fit: contain;
       background: #fff;
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 6px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
     }
 
     .job-title {
@@ -271,9 +284,10 @@
     }
 
     .logo-chip img {
-      width: 28px;
-      height: 28px;
+      width: 30px;
+      height: 30px;
       object-fit: contain;
+      border-radius: 6px;
     }
 
     footer {
@@ -374,24 +388,28 @@
 
             <div class="logo-strip">
               <div class="logo-chip">
-                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Sul_Ross_State_University_seal.svg/120px-Sul_Ross_State_University_seal.svg.png" alt="Sul Ross State University logo">
+                <img src="SR%20logo.jpg" alt="Sul Ross State University logo">
                 <span>Sul Ross State University</span>
               </div>
               <div class="logo-chip">
-                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/University_of_Akron_seal.svg/120px-University_of_Akron_seal.svg.png" alt="University of Akron logo">
+                <img src="UA.png" alt="University of Akron logo">
                 <span>University of Akron</span>
               </div>
               <div class="logo-chip">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Analog_Devices_Logo.svg/200px-Analog_Devices_Logo.svg.png" alt="Analog Devices logo">
+                <img src="adi.jpg" alt="Analog Devices logo">
                 <span>Analog Devices</span>
               </div>
               <div class="logo-chip">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Dassault_Syst%C3%A8mes_logo.svg/200px-Dassault_Syst%C3%A8mes_logo.svg.png" alt="Dassault Systemes logo">
+                <img src="ds%20logo.png" alt="Dassault Systemes logo">
                 <span>Dassault Systèmes</span>
               </div>
               <div class="logo-chip">
-                <img src="https://logo.clearbit.com/netdriven.com" alt="Net Driven logo">
+                <img src="nd%20logo.png" alt="Net Driven logo">
                 <span>Net Driven</span>
+              </div>
+              <div class="logo-chip">
+                <img src="Agilix%20Health%20logo.png" alt="Agilix Health logo">
+                <span>Agilix Health</span>
               </div>
             </div>
           </div>
@@ -407,7 +425,7 @@
 
           <div class="card">
             <div class="company">
-              <img class="company-logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Sul_Ross_State_University_seal.svg/120px-Sul_Ross_State_University_seal.svg.png" alt="Sul Ross State University logo">
+              <img class="company-logo" src="SR%20logo.jpg" alt="Sul Ross State University logo">
               <div class="job-title">Research Analyst</div>
             </div>
             <div class="meta">Sul Ross State University · Remote · January 2026 to Present</div>
@@ -421,7 +439,7 @@
 
           <div class="card">
             <div class="company">
-              <img class="company-logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/University_of_Akron_seal.svg/120px-University_of_Akron_seal.svg.png" alt="University of Akron logo">
+              <img class="company-logo" src="UA.png" alt="University of Akron logo">
               <div class="job-title">Business Intelligence Analyst</div>
             </div>
             <div class="meta">University of Akron · November 2022 to December 2025</div>
@@ -436,16 +454,49 @@
 
           <div class="card">
             <div class="company">
-              <img class="company-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Analog_Devices_Logo.svg/200px-Analog_Devices_Logo.svg.png" alt="Analog Devices logo">
-              <img class="company-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Dassault_Syst%C3%A8mes_logo.svg/200px-Dassault_Syst%C3%A8mes_logo.svg.png" alt="Dassault Systemes logo">
-              <img class="company-logo" src="https://logo.clearbit.com/netdriven.com" alt="Net Driven logo">
-              <div class="job-title">Earlier Analytics Experience</div>
+              <img class="company-logo" src="Agilix%20Health%20logo.png" alt="Agilix Health logo">
+              <div class="job-title">Analytics Experience</div>
             </div>
-            <div class="meta">Agilix Health · Analog Devices · Dassault Systèmes · Net Driven</div>
+            <div class="meta">Agilix Health</div>
             <ul>
-              <li>Built dashboards and performance reports across business operations, marketing analytics, and digital engagement functions.</li>
-              <li>Worked with Power BI, Adobe Analytics, Google Analytics, Salesforce, and campaign reporting tools.</li>
-              <li>Strengthened skills in data storytelling, user-focused reporting, and applied analytics across different industries.</li>
+              <li>Built and supported analytics reporting for healthcare-related business needs.</li>
+              <li>Created clear visual summaries to support decision-making and operational insight.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="company">
+              <img class="company-logo" src="adi.jpg" alt="Analog Devices logo">
+              <div class="job-title">Analytics Experience</div>
+            </div>
+            <div class="meta">Analog Devices</div>
+            <ul>
+              <li>Worked with operational and business data to support reporting and performance analysis.</li>
+              <li>Strengthened experience in data storytelling and analytics across industry settings.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="company">
+              <img class="company-logo" src="ds%20logo.png" alt="Dassault Systemes logo">
+              <div class="job-title">Analytics Experience</div>
+            </div>
+            <div class="meta">Dassault Systèmes</div>
+            <ul>
+              <li>Supported analytics and digital reporting projects across business functions.</li>
+              <li>Used BI-oriented thinking to organize metrics into useful, decision-ready views.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="company">
+              <img class="company-logo" src="nd%20logo.png" alt="Net Driven logo">
+              <div class="job-title">Marketing Analytics Experience</div>
+            </div>
+            <div class="meta">Net Driven</div>
+            <ul>
+              <li>Worked with campaign and web analytics data to monitor marketing performance.</li>
+              <li>Helped turn digital metrics into actionable reporting and insights.</li>
             </ul>
           </div>
 
