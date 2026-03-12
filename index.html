@@ -19,6 +19,7 @@
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -40,29 +41,32 @@
       top: 0;
       z-index: 10;
       backdrop-filter: blur(10px);
-      background: rgba(247, 249, 252, 0.88);
+      background: rgba(247, 249, 252, 0.92);
       border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+      text-align: center;
     }
 
     .nav {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      padding: 14px 0;
-      gap: 16px;
+      padding: 22px 0 14px;
+      gap: 8px;
     }
 
     .brand {
-      font-weight: 700;
-      font-size: 1.05rem;
-      letter-spacing: 0.2px;
+      font-weight: 800;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
     }
 
     .nav-links {
       display: flex;
       gap: 18px;
       flex-wrap: wrap;
-      font-size: 0.95rem;
+      justify-content: center;
+      font-size: 0.98rem;
     }
 
     .hero {
@@ -143,11 +147,14 @@
       border-top: 1px solid var(--border);
     }
 
-    .stat:first-of-type { border-top: 0; padding-top: 0; }
+    .stat:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
 
     .stat strong {
       display: block;
-      font-size: 1.4rem;
+      font-size: 1.25rem;
       margin-bottom: 4px;
     }
 
@@ -191,10 +198,28 @@
       gap: 16px;
     }
 
+    .company {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+    }
+
+    .company-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 6px;
+    }
+
     .job-title {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 700;
-      margin-bottom: 4px;
+      margin: 0;
     }
 
     .meta {
@@ -227,6 +252,30 @@
       gap: 18px;
     }
 
+    .logo-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .logo-chip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    }
+
+    .logo-chip img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+
     footer {
       padding: 38px 0 56px;
       color: var(--muted);
@@ -241,9 +290,8 @@
         grid-template-columns: 1fr;
       }
 
-      .nav {
-        align-items: flex-start;
-        flex-direction: column;
+      .brand {
+        font-size: 2rem;
       }
     }
   </style>
@@ -323,6 +371,29 @@
               I am especially interested in institutional research, enrollment and student outcomes analysis, assessment,
               survey design, and using visual storytelling to support data-informed culture.
             </p>
+
+            <div class="logo-strip">
+              <div class="logo-chip">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Sul_Ross_State_University_seal.svg/120px-Sul_Ross_State_University_seal.svg.png" alt="Sul Ross State University logo">
+                <span>Sul Ross State University</span>
+              </div>
+              <div class="logo-chip">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/University_of_Akron_seal.svg/120px-University_of_Akron_seal.svg.png" alt="University of Akron logo">
+                <span>University of Akron</span>
+              </div>
+              <div class="logo-chip">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Analog_Devices_Logo.svg/200px-Analog_Devices_Logo.svg.png" alt="Analog Devices logo">
+                <span>Analog Devices</span>
+              </div>
+              <div class="logo-chip">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Dassault_Syst%C3%A8mes_logo.svg/200px-Dassault_Syst%C3%A8mes_logo.svg.png" alt="Dassault Systemes logo">
+                <span>Dassault Systèmes</span>
+              </div>
+              <div class="logo-chip">
+                <img src="https://logo.clearbit.com/netdriven.com" alt="Net Driven logo">
+                <span>Net Driven</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -333,8 +404,12 @@
         <h2 class="section-title">Professional Experience</h2>
         <p class="section-subtitle">Selected roles in higher education analytics, business intelligence, and reporting.</p>
         <div class="timeline">
+
           <div class="card">
-            <div class="job-title">Research Analyst</div>
+            <div class="company">
+              <img class="company-logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Sul_Ross_State_University_seal.svg/120px-Sul_Ross_State_University_seal.svg.png" alt="Sul Ross State University logo">
+              <div class="job-title">Research Analyst</div>
+            </div>
             <div class="meta">Sul Ross State University · Remote · January 2026 to Present</div>
             <ul>
               <li>Coordinate and validate institutional data submissions for IPEDS, THECB, and other internal and external reporting needs.</li>
@@ -345,7 +420,10 @@
           </div>
 
           <div class="card">
-            <div class="job-title">Business Intelligence Analyst</div>
+            <div class="company">
+              <img class="company-logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4f/University_of_Akron_seal.svg/120px-University_of_Akron_seal.svg.png" alt="University of Akron logo">
+              <div class="job-title">Business Intelligence Analyst</div>
+            </div>
             <div class="meta">University of Akron · November 2022 to December 2025</div>
             <ul>
               <li>Responded to ad hoc data requests involving complex extractions, analysis, and reporting using institutional and external datasets.</li>
@@ -357,7 +435,12 @@
           </div>
 
           <div class="card">
-            <div class="job-title">Earlier Analytics Experience</div>
+            <div class="company">
+              <img class="company-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Analog_Devices_Logo.svg/200px-Analog_Devices_Logo.svg.png" alt="Analog Devices logo">
+              <img class="company-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Dassault_Syst%C3%A8mes_logo.svg/200px-Dassault_Syst%C3%A8mes_logo.svg.png" alt="Dassault Systemes logo">
+              <img class="company-logo" src="https://logo.clearbit.com/netdriven.com" alt="Net Driven logo">
+              <div class="job-title">Earlier Analytics Experience</div>
+            </div>
             <div class="meta">Agilix Health · Analog Devices · Dassault Systèmes · Net Driven</div>
             <ul>
               <li>Built dashboards and performance reports across business operations, marketing analytics, and digital engagement functions.</li>
@@ -365,6 +448,7 @@
               <li>Strengthened skills in data storytelling, user-focused reporting, and applied analytics across different industries.</li>
             </ul>
           </div>
+
         </div>
       </div>
     </section>
